@@ -31,4 +31,5 @@ Web Notebook adalah aplikasi catatan berbasis web dengan tampilan modern, bersih
 
 ---
 
-## Struktur Folder
+## URL 
+https://muhramadoni.github.io/web-notebook/
