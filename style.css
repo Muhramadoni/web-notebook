@@ -1,0 +1,218 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --primary: #6366f1;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --radius: 12px;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* LAYOUT */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.5rem;
+  flex: 1;
+}
+
+/* INPUT */
+.input-section {
+  background: var(--card);
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.input-section input,
+.input-section textarea,
+.search-section input,
+.edit-form input,
+.edit-form textarea {
+  background: #020617;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  color: var(--text);
+  outline: none;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary);
+}
+
+/* BUTTON */
+button {
+  background: linear-gradient(135deg, var(--primary), #4f46e5);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.45);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text);
+  box-shadow: none;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, var(--danger), #dc2626);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.3);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--success), #16a34a);
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.3);
+}
+
+/* SEARCH */
+.search-section {
+  margin: 1.5rem 0;
+}
+
+.search-section input {
+  width: 100%;
+}
+
+/* NOTES GRID */
+.notes-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.note-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  animation: fadeUp 0.25s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.note-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.note-date {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.note-content {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #d1d5db;
+  flex: 1;
+}
+
+/* ACTIONS */
+.note-actions {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.note-actions button {
+  font-size: 0.7rem;
+  padding: 0.35rem 0.55rem;
+  box-shadow: none;
+}
+
+/* EDIT MODE */
+.edit-form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+}

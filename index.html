@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Notebook</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Web Notebook</h1>
+      <p>Aplikasi notebook yang simple dan ramah pengguna</p>
+    </header>
+
+    <main class="container">
+      <section class="input-section">
+        <input
+          type="text"
+          name=""
+          id="titleInput"
+          placeholder="Judul catatan..."
+        />
+        <textarea
+          name=""
+          id="noteInput"
+          placeholder="Tulis catatanmu disini"
+        ></textarea>
+        <button id="addBtn">Tambah Catatan</button>
+      </section>
+
+      <section class="search-section">
+        <input
+          type="text"
+          name=""
+          id="searchInput"
+          placeholder="Cari catatan"
+        />
+      </section>
+
+      <section class="notes-section" id="notesContainer"></section>
+    </main>
+
+    <footer>
+      <p>© 2026 Web Notebook • Built by Ramadoni</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
